@@ -56,7 +56,7 @@ class PartnerController extends Controller
     //Method
     public function method_4m(ProductType $product_type, MaterialType $material_type, int $quantity, float $p1, float $p2){
         try {
-            $need_quantity = p1 * p2 * $product_type->coefficient * (1 + $product_type->materialType->defective);
+            $need_quantity = $p1 * $p2 * $product_type->coefficient * (1 + $product_type->materialType->defective);
             return $need_quantity;
         } catch (\Exception $exception  ) {
             return -1;
